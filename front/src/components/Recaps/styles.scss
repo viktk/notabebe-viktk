@@ -1,0 +1,87 @@
+@use 'src/styles/vars' as v;
+
+.recaps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+
+  &__filter {
+    display: flex;
+    margin-top: 1rem;
+
+    &__input {
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #999;
+      height: 35px;
+      padding-left: 15px;
+
+      &::placeholder{
+        color: rgb(200, 200, 200);
+      }
+    }
+  }
+
+  &__listing__recap {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    //align-items: flex-start;
+    width: 80%;
+    background-color: v.$bg-color-card;
+    border: 1px solid v.$primary-color;
+    border-radius: 5px;
+    padding: 0.8rem;
+
+    &__title {
+      text-align: center;
+      color: v.$primary-color;
+      margin-bottom: 8px;
+    }
+
+    &__mood {
+     color: v.$violet-color;
+     text-align: center;
+     margin-bottom: 8px;
+     font-style: italic;
+    }
+
+    &__nap__time {
+      padding-top: 5px;
+    }
+
+    &__nap__comment {
+      margin-top: 5px;
+    }
+
+    &__meal {
+      margin-top: 8px;
+
+      &__comment {
+        padding-top: 5px;
+      }
+    }
+
+    &__otherscomment {
+      margin-top: 8px;
+    }
+  }
+
+  // .recap {
+  //   margin: 2rem 1rem;
+  //   border: 1px solid v.$primary-color;
+  //   border-radius: 5px;
+  //   padding: 1.4rem 2rem;
+  //   background-color: v.$bg-color-card;
+  // }
+  
+  }
+
+
+span {
+  font-weight: bold;
+}
+

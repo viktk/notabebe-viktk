@@ -1,0 +1,24 @@
+@use 'src/styles/vars' as v;
+@use "sass:math";
+
+.parentprofile {
+  padding-bottom: 5rem;
+  // width: 100%;
+  // display: flex;
+  // flex-direction: column;
+
+    &__button {
+      font-size: 1em;
+      display: block;
+      margin: math.div(v.$gutter, 2) auto;
+      padding: math.div(v.$gutter, 2);
+      background-color: v.$bg-color;
+      border: none;
+      color: white;
+      border-radius: 5px;
+     
+     &:hover {
+        background-color: v.$bg-color;
+     }
+    }
+}

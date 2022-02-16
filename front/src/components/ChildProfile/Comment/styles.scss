@@ -1,0 +1,148 @@
+@use 'src/styles/vars' as v;
+@use "sass:math";
+
+.comment {
+  margin-top: v.$gutter;
+  border: none;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+  -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+  -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+  margin: 0 v.$gutter v.$gutter;
+  background-color: #fff;
+  border-radius: 5px;
+
+  padding: 5px;
+  
+  &__text {
+    margin-top: math.div(v.$gutter, 2);
+    padding: 1rem 0;
+
+    &__label {
+      color: v.$primary-color;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: math.div(v.$gutter, 2);
+    }
+    &__textarea {
+      display: block;
+      width: 90%;
+      resize: none;
+      margin: math.div(v.$gutter, 2) auto;
+      padding: math.div(v.$gutter, 2);
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+    }
+  }
+  &__submitt {
+    margin: 0.3rem auto;
+    margin-bottom: v.$gutter;
+    display: block;
+    padding: math.div(v.$gutter, 3);
+    background-color: v.$primary-color;
+    border: none;
+    border-radius: 5px;
+    color: white;
+  }
+  &__success {
+    text-align: center;
+    color: v.$violet-color;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: v.$gutter;
+    margin-bottom: v.$gutter*3;
+
+  }
+
+  &__allcomments {
+    margin-top: 2rem;
+    margin-bottom: v.$gutter*3;
+    &__title{
+      padding-left: 1.2rem;
+      padding-bottom: 1.2rem;
+      color: v.$primary-color;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: math.div(v.$gutter, 2);
+
+    }
+  }
+
+  &__onecomment {
+    
+    width: 80%;
+    margin: 1rem auto;
+    padding: math.div(v.$gutter, 2);
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background-color: v.$bg-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+
+      &__comment2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      &__infos {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__date {
+        font-size: .9em;
+        color: #fefefe;
+      }
+
+      &__message {
+        font-size: 1.1em;
+        width: 100%;
+        resize: none;
+        margin-top: 5px;
+      }
+
+      &__icons {
+        display: flex;
+        //flex-direction: column;
+        color: white;
+
+        &__icon {
+          display: inline-flex;
+          margin-top: 30px;
+        }
+      }
+      &__buttons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        &__submit {
+          display: block;
+          padding: math.div(v.$gutter, 3);
+          background-color: v.$primary-color;
+          border: none;
+          border-radius: 5px;
+          color: white;
+        }
+        &__cancel {
+          font-size: .9em;
+          display: block;
+          padding: math.div(v.$gutter, 3);
+          background-color: v.$red-color;
+          border: none;
+          border-radius: 5px;
+          color: white;
+          margin-right: 10px;
+        }
+      }
+  }
+}

@@ -1,0 +1,54 @@
+@use 'src/styles/vars' as v;
+@use "sass:math";
+
+.changechildinfosform {
+     margin: 0 v.$gutter v.$gutter;
+     padding: math.div(v.$gutter, 2) v.$gutter;
+     border-radius: 10px;
+     border: 1px solid #eee;
+     background-color: #fff;
+     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+        
+  &__fullname {
+     font-size: 1rem;
+     color: v.$red-color;
+     margin-bottom: .5rem;
+     font-size: 1.5em;
+    color: v.$red-color;
+   }
+  
+  &__email {
+      font-size: .7rem;
+      margin-bottom: 1rem;
+  }
+  
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: math.div(v.$gutter, 4);
+    align-items: center;
+
+    &__send {
+      display: block;
+      padding: math.div(v.$gutter, 3);
+      background-color: v.$primary-color;
+      border: none;
+      margin-left: 10px;
+      border-radius: 5px;
+      color: white;
+
+    }
+    &__cancel {
+      font-size: .9em;
+      display: block;
+      padding: math.div(v.$gutter, 3);
+      background-color: v.$red-color;
+      border: none;
+      border-radius: 5px;
+      color: white;
+    }
+  }
+}
+

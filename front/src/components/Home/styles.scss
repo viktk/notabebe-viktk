@@ -1,0 +1,142 @@
+@use 'src/styles/vars' as v;
+
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  align-items: center;
+  // background-image: url('src/images/baleines.png');
+  // padding-top: 1rem;
+  // background-size: 160px;
+  // background-repeat: no-repeat;
+  //background-position-y: 450px;
+  //background-position-x: 100px;
+  background-position: bottom;
+  padding-top: 0;
+}
+
+.homeLogo {
+  display: flex;
+  width: 170px;
+  margin-top: -4rem;
+  padding-bottom: 5rem;
+}
+
+.loginForm {
+  display: flex;
+  margin: 0 auto;
+  // margin-top: 3rem;
+  // margin-bottom: 12rem;
+  flex-direction: column;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+	-webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+	-moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    color: v.$violet-color;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: v.$amatic;
+  }
+
+  &__errorMsg {
+    display: flex;
+    flex-direction: column;
+    color: red;
+    display: flex;
+    text-align: center;
+    margin: 0 2rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    justify-content: center;
+
+    &__error {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    &__errorBis {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin: 1rem auto;
+    flex-direction: column;
+  }
+}
+
+.settings {
+  &__form {
+    width: 100%;
+  }
+
+  &__input,
+  &__send {
+    border: 1px solid #ccc;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    height: 40px;
+    width: 270px;
+    
+  }
+
+  &__input {
+    background-color: white;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-family: v.$prompt;
+  }
+
+  &__send {
+    margin: 1rem 0;
+    background-color: v.$primary-color;
+    color: #fff;
+    font-family: v.$georama;
+  }
+
+  &__send:hover {
+    background-color: #1bc4ca;
+  }
+
+  &__forgottxt {
+    text-align: right;
+    padding-right: 0.5rem;
+    font-size: 0.7rem;
+    color: #777;
+  }
+
+  &__forgottxt:hover {
+    color: #06C4CA;
+  }
+}
+
+.backButton {
+  padding-bottom: 0.1rem;
+  &__contentButton {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+  }
+}
+
+

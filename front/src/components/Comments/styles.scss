@@ -1,0 +1,60 @@
+@use 'src/styles/vars' as v;
+
+h1 {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: v.$primary-color;
+  font-weight: bold;
+  text-align: center;
+}
+
+.filter {
+  text-align: center;
+  margin-top: 20px;
+
+  margin-bottom: 10px;
+}
+
+.filter__input {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(199, 199, 199);
+  padding-left: 5px;
+
+  &::placeholder{
+    color: rgb(200, 200, 200);
+  }
+}
+
+
+.commments__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5rem;
+  padding-bottom: 5rem;
+}
+
+.commment {
+  padding: 10px;
+  border: 1px solid v.$primary-color;
+  border-radius: 10px;
+  margin: 10px 10px;
+  background-color: v.$bg-color-card;
+
+  &__child__date {
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+}
+
+span {
+  font-weight: bold;
+}

@@ -1,0 +1,70 @@
+## TEST ADMIN ROUTES
+
+### DISPLAYING ALL OF THE USERS
+GET http://localhost:3000/profile/admin/allusers
+
+
+### DISPLAYING ALL PARENTS 
+GET http://localhost:3000/profile/admin/parents
+
+
+### DISPLAYING ALL STAFF MEMBERS
+GET http://localhost:3000/profile/admin/allstaff
+
+
+### DISPLAYING ALL CHILDREN 
+GET http://localhost:3000/profile/admin/children
+
+
+### DISPLAYING A CHILD 
+GET http://localhost:3000/profile/admin/child/2
+
+
+### ADDING A CHILD
+POST http://localhost:3000/profile/admin/parent/3/managechildren
+Content-Type: application/json
+
+{
+    "first_name": "Mickael",
+    "last_name": "Menet",
+    "birthdate": "18/04/1995",
+    "birthplace": "Metz",
+    "sex": "F",
+    "allergies": "amandes"
+}
+
+
+### MODIFYING A CHILD PROFILE
+PATCH http://localhost:3000/profile/admin/parent/2/managechildren/3
+Content-Type: application/json
+
+{
+    "first_name": "Charles",
+    "birthplace": "Orvault"
+}
+
+
+### DELETING A CHILD PROFILE
+DELETE http://localhost:3000/profile/admin/parent/2/managechildren/3
+
+
+### ADDING A USER
+POST http://localhost:3000/profile/admin/manageprofile
+Content-Type: application/json
+
+{
+    "first_name": "Mickael",
+    "last_name": "Menet",
+    "address": "50 rue de Paris",
+    "postcode": "12345",
+    "city": "Marigny",
+    "email": "testemaiiiilffgfg@gmail.com",
+    "password": "monsuperpassword",
+    "phone_number": "0611203948",
+    "role_id": 3
+}
+
+
+### DELETING A USER
+DELETE http://localhost:3000/profile/admin/manageprofile/15
+

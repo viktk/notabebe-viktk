@@ -1,0 +1,8 @@
+%syntax-version=1.0.0
+%project=NotaBebe
+
+initialisation 2021-08-16T19:04:34Z MorganeBENUREAU <morgane.benureau@gmail.com> # initialisation du projet
+adding-roles 2021-08-17T12:57:03Z Blandine Jarysta <blandine.jarysta@gmail.com> # adding our defined roles in the database
+view-parent-with-child 2021-08-23T09:40:16Z MorganeBENUREAU <morgane.benureau@gmail.com> # creating a view to get each parent's child/children
+view-recap-with-nap-and-meal 2021-08-23T13:40:09Z Blandine Jarysta <blandine.jarysta@gmail.com> # adding a view to mix together all infos for a recap
+view-comments-with-parents 2021-08-26T07:14:59Z MorganeBENUREAU <morgane.benureau@gmail.com> # creating view in order to link comments with parents

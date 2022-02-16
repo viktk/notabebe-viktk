@@ -1,0 +1,255 @@
+@use 'sass:color';
+@use 'src/styles/vars' as v;
+
+
+// Partie vue mobile
+.button-settings-back {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  width: fit-content;
+  color: #fff;
+  margin-top: 1.3rem;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  background-color: #06C4CA;
+}
+
+.adminMobileHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    max-width: 95%;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  &__txt {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    padding-bottom: 6rem;
+    
+    &__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+}
+
+// Partie vue Desktop
+.adminDesktopHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__adminTitle {
+    margin: 1rem 0 3rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+    &__messageSuccess {
+      padding-top: 2rem;
+      color: green;
+    }
+
+    &__messageError {
+      padding-top: 2rem;
+      color: red;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 0 3rem 1rem 3rem;
+  border-bottom: 1px solid #ddd;
+  width: 1000px;
+  margin-bottom: 2rem;
+
+  &__link {
+    display: flex;
+    padding: 0 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: #000;
+
+    &__selected {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: #e52354;
+    }
+  }
+}
+
+.contentInputAdd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .uiInput {
+    display: flex;
+    width: 750px;
+  }
+  
+  .uiButtonInput {
+    display: flex;
+  
+  }
+}
+
+.containerTable {
+  margin-top: 5rem;
+}
+
+.contentBar {
+  &__searchBar {
+    display: flex;
+    width: 740px;
+    height: 40px;
+    border: 1px solid #E3E3E4;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #aaa;
+    
+    &__icon {
+      display: flex !important;
+      align-items: center !important;
+      height: 40px !important;
+      padding-right: 0.8rem !important;
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+      width: 690px;
+      border: none;
+      color: grey;
+      padding-left: 1rem;
+
+
+      &::placeholder {
+        color: #ccc;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.TableListUser {
+  width: 1200px;
+  padding-bottom: 10rem;
+}
+
+.columnTitle {
+  font-weight: bold;
+}
+
+.roleSelectedMenu {
+  select:focus {
+    outline: none;
+  }
+  select {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.ContentEditModal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 1000px;
+  padding: 2rem;
+  margin-bottom: 10rem;
+
+  &__parent {
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+    // border-right: 1px solid #ccc;
+  }
+
+  &__child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__addChild {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    &__listChild {
+      display: flex;
+      padding-left: 1rem;
+      flex-direction: column;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.childName {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.messageSuccessAddUser {
+  color:green;
+}
+
+.messageErrorAddUser {
+  color: red;
+}
+
+.addUserForm {
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  width: 1200px;
+}
+
+.headerAdmin {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 0 0.5rem;
+  
+  display: flex;
+  background: v.$violet-color;
+  align-items: center;
+
+  &__logoButton {
+    display: flex;
+  }
+
+  &__title {
+    display: flex;
+    margin: 0 auto;
+    font-size: 2em;
+    font-family: v.$georama;
+    color: v.$yann-color;
+    font-weight: bold;
+    font-style: normal;
+  }
+  &__logo img {
+    display: flex;
+    width: 80px;
+    padding: 0.3rem;
+  }
+}

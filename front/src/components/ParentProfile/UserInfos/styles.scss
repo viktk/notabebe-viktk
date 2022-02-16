@@ -1,0 +1,47 @@
+@use 'src/styles/vars' as v;
+@use "sass:math";
+
+.userinfos {
+  margin: 0 v.$gutter v.$gutter;
+  padding: math.div(v.$gutter, 2) v.$gutter;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+	-webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+	-moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+  text-overflow: ellipsis;
+  word-wrap: break-word;   
+
+
+  &__infos {
+    font-size: .9rem;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &__designation {
+        font-weight: bold;
+        padding-bottom: math.div(v.$gutter, 2);
+        &__address {
+          font-weight: bold;
+        }
+        &__tel {
+          font-weight: bold;
+          padding: math.div(v.$gutter, 2) 0;
+
+        }
+      }
+    &__result {
+        padding-left: math.div(v.$gutter, 2);
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+      }
+    }
+    &__button {
+      display: block;
+      margin: math.div(v.$gutter, 4) auto;
+      padding: math.div(v.$gutter, 3);
+      background-color: v.$secondary-color;
+      border: none; 
+    }
+  }

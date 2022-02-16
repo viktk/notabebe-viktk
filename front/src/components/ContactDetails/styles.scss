@@ -1,0 +1,22 @@
+// .contact {
+//   padding-bottom: 0.1rem;
+// }
+
+.contact__nursery, .contact__admin, .contact__dev {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+  width: 300px;
+  height: auto;
+  padding: 1.4rem;
+  margin: 1rem auto;
+  border-bottom: 1px solid #ccc;
+
+  &__details, &__adress, &__phone, &__mail {
+    margin-top: 15px;
+  }
+}

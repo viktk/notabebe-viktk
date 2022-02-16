@@ -1,0 +1,229 @@
+@use 'src/styles/vars' as v;
+@use "sass:math";
+
+.createrecap {
+
+  input {
+    border-radius: 5px;
+    border: 1px solid #999;
+    height: 35px;
+    padding-left: 15px;
+  }
+  margin: .3rem;
+  margin-bottom: 5rem;
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-size: 1.5em;
+  }
+  &__firstname {
+    color: v.$bg-color;
+    font-size: 2em;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  &__date {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    &__text {
+      margin: auto 10px;
+      font-weight: bold;
+    }
+  }
+  &__mood {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    select {
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #999;
+      height: 35px;
+      padding-left: 15px;
+    }
+    &__label {
+      margin: auto 0;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  }
+  &__nap {
+    border-radius: 5px;
+    background-color: v.$bg-color;
+    margin: 2rem 1rem;
+    padding: .5rem;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+    -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+    -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: .3rem;
+  }
+  &__time {
+    display: flex;
+    flex-direction: column;
+    &__designation {
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    &__inputs {
+      display: flex;
+      justify-content: space-evenly;
+      &__input {
+        height: 50px;
+        width: 125px;
+      }
+    }
+  }
+    // &__label {
+    // margin: auto 10px;
+    // font-size: 1em;
+    //   font-weight: bold;
+    // }
+    &__comment {
+      margin: 20px;
+      &__label {
+      font-size: 1em;
+      font-weight: bold;
+      }
+      &__textarea {
+        display: block;
+        width: 100%;
+        resize: none;
+        margin: math.div(v.$gutter, 2) auto;
+        padding: math.div(v.$gutter, 2);
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+      }
+    }
+    
+    &__button {
+      display: block;
+      border-radius: 5px;
+      background-color: v.$bg-color;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      padding: math.div(v.$gutter, 2);
+      color: white;
+      border: none;
+      font-size: 1.2em;
+      box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+
+      &__cancel {
+        display: block;
+        margin: .4rem auto;
+        padding: math.div(v.$gutter, 2);
+        color: white;
+        border: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+        background-color: v.$red-color;
+      }
+      &__cancel:hover {
+        background-color: v.$redhover-color;
+      }
+    }
+    &__button:hover {
+      background-color: v.$hover-color;
+    }
+  }
+
+  &__submit {
+    display: block;
+    background-color: v.$primary-color;
+    margin: 0 auto;
+    padding: v.$gutter;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+    -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+    -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);     
+  }
+  &__submit:hover {
+    background-color: v.$secondary-color;
+  }
+  &__success {
+    &__text {
+      display: block;
+      color: v.$primary-color;
+      font-size: 1.3rem;
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+    &__button {
+      display: block;
+      background-color: v.$primary-color;
+      margin: 0 auto;
+      padding: v.$gutter;
+      color: white;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+      box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+    }
+  }
+  
+}
+
+
+.child__select {
+  margin: 5px;
+}
+
+select {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+
+#mood {
+  margin-left: 20px;
+}
+
+
+label {
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+textarea {
+  // padding: 10px 10px 10px 10px;
+  // background-color: #fff;
+  // border-radius: 5px;
+  // border: 1px solid #999;
+  // height: 100px;
+  // padding-left: 15px;
+
+  display: block;
+  width: 100%;
+  resize: none;
+  margin: math.div(v.$gutter, 2) auto;
+  padding: math.div(v.$gutter, 2);
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+
+
+.buttons {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: 1px solid black;
+  margin-top: 20px;
+}

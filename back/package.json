@@ -1,0 +1,32 @@
+{
+  "name": "NotaBebe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon",
+    "installdev": "sqitch revert -y; sqitch deploy; psql -U postgres -f data/seeding.sql",
+    "installprod": "sqitch revert prod -y; sqitch deploy prod; psql -U postgres -f data/seeding.sql",
+    "herokuprod": "sqitch revert heroku -y; sqitch deploy heroku; cat data/seeding.sql | heroku pg:psql",
+    "herokudb": "cat data/seeding.sql | heroku pg:psql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.1",
+    "sanitizer": "^0.1.3"
+  }
+}

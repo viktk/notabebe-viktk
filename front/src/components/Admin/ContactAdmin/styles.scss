@@ -1,0 +1,60 @@
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  position: static;
+  margin-top: 30px;
+}
+
+.nursery__contact, .admin__contact, .dev__team {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+  text-align: left;
+  margin-top: 1rem;
+  padding: 20px;
+}
+
+.nursery__contact {
+
+    &__adress, &__mail, &__phone {
+    margin-top: 15px;
+  }
+}
+
+.admin__contact__mail, .dev__team__mail {
+  margin-top: 15px;
+}
+
+.returnlink {
+  display: flex;
+  margin: 1rem auto;
+  flex-direction: column;
+  width: fit-content;
+  padding: 1rem 2rem;
+}
+
+.admin__contact {
+  margin-top: 2rem;
+}
+
+// h1 {
+//   margin-bottom: 15px;
+//   font-weight: bold;
+//   font-style: italic;
+// }
+
+// p {
+//   margin-bottom: 15px;
+// }
+
+.backButtonContact {
+  margin-top: 2rem;
+}

@@ -1,0 +1,64 @@
+@use 'src/styles/vars'as v;
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+
+
+  // padding: v.$gutter, 2;
+  display: flex;
+  background: v.$violet-color;
+  align-items: center;
+
+  &-blank {
+    display: flex;
+    width: 60px;
+  }
+
+  &-title {
+    display: flex;
+    margin: 0 auto;
+    font-size: 2em;
+    font-family: v.$georama;
+    color: v.$yann-color;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  &-logo {
+    display: flex;
+    width: 80px;
+    padding: 0.3rem;
+  }
+}
+
+.iconBurger {
+  color: #fff !important;
+  font-size: 1.5rem !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 1rem !important;
+}
+
+// .dropMenu {
+//   margin-top: -25px !important;
+//   width: fit-content !important;
+//   padding-bottom: 1rem !important;
+// }
+
+.dropMenu {
+  margin-top: -25px !important;
+  width: 100vw !important;
+  // padding-bottom: 1rem !important;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+}

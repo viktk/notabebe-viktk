@@ -1,0 +1,47 @@
+@use 'src/styles/vars' as v;
+
+.field {
+  margin: .3em .3em .3em 0;
+  position: relative;
+
+  &-input {
+    width: 100%;
+    padding: .7em;
+    font-size: .8em;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: .3em;
+    height: 2.5em;
+    margin-top: 10px;
+
+    &:focus {
+      border-color: v.$bg-color;
+
+      & + .field-label {
+        color: v.$bg-color;
+      }
+    }
+  }
+
+  &-label {
+    position: absolute;
+    top: .3rem;
+    left: .7rem;
+    color: v.$primary-color;
+    font-size: .7em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &--has-content {
+    .field-label {
+      display: block;
+    }
+    .field-input {
+      padding: 1.4em .7em .4em;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,72 @@
+## TEST PARENTS ROUTES
+
+
+### DISPLAYING PARENT PROFILE BY ID
+GET http://localhost:3000/profile/parent/1
+
+
+### DISPLAYING CHILD ACCORDING TO PARENT PROFILE
+GET http://localhost:3000/profile/parent/3/child/4
+
+###  DISPLAYING CHILD RECAPS ACCORDING TO PARENT
+GET http://localhost:3000/profile/parent/2/child/3/allrecaps
+
+### MODIFYING CHILD PROFILE 
+PATCH http://localhost:3000/profile/parent/3/child/4
+Content-Type: application/json
+
+{
+    "first_name": "olivier",
+    "birthplace": "nantes"
+}
+
+
+### UPDATING PARENT INFO
+PATCH http://localhost:3000/profile/parent/8/
+Content-Type: application/json
+
+{
+    "phone_number": "0123456789",
+    "address": "3 rue des patates",
+    "postcode": "75000",
+    "city": "Paris"
+}
+
+
+### UPDATING PARENT PASSWORD
+PATCH http://localhost:3000/profile/parent/6/password
+Content-Type: application/json
+
+{   
+    "oldPassword": "victor2",
+    "password": "victor"
+}
+
+
+## COMMENTS
+
+### DISPLAYING COMMENTS BY PARENT ID - for parents
+GET http://localhost:3000/profile/parent/1/comments
+
+
+### ADDING A COMMENT
+POST http://localhost:3000/profile/parent/1/child/1/comments
+Content-Type: application/json
+
+{
+    "message": "essai de com"
+}
+
+
+### MODIFYING A COMMENT
+PATCH http://localhost:3000/profile/parent/1/child/1/comments/12
+Content-Type: application/json
+
+{
+    "message": "essai de modif de com",
+    "child_id": 1
+}
+
+
+### DELETING A COMMENT
+DELETE http://localhost:3000/profile/parent/1/child/1/comments/12

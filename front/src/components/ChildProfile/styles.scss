@@ -1,0 +1,40 @@
+@use 'src/styles/vars' as v;
+@use "sass:math";
+
+.childprofile {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+   &__button {
+     font-size: .8em;
+     display: block;
+     margin: math.div(v.$gutter, 4) auto;
+     padding: math.div(v.$gutter, 3);
+     background-color: v.$violet-color;
+     border: none;
+     color: white;
+     border-radius: 5px;
+
+     &__recap {
+      background-color: v.$bg-color;
+      font-size: 1.5em;
+      margin-top: 2rem;
+      padding: math.div(v.$gutter, 2) v.$gutter;
+      margin-bottom: 2rem;
+      width: 80%;
+      box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-evenly;
+     }
+     
+     &:hover {
+       background-color: v.$violet-color;
+     }
+   }
+
+
+}

@@ -1,0 +1,300 @@
+## TEST HTTP
+
+### API error 404
+GET http://localhost:3000/rdfhf
+
+
+### try login with other user - hashed password to try with bcrypt compareSync 
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "blandine@notabebe.io",
+    "password": "blandine"
+}
+
+
+### try login wrong password 
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "parent@notabebe.io",
+    "password": "test"
+}
+
+
+# a tester?
+# ### logout user
+# GET http://localhost:3000/logout
+
+
+
+
+
+
+
+
+
+
+
+
+### DISPLAYING ALL OF THE USERS - for admin only
+GET http://localhost:3000/profile/admin/allusers
+
+### DISPLAYING ALL PARENTS - for admin
+GET http://localhost:3000/profile/admin/parents
+
+### DISPLAYING ALL STAFF MEMBERS - for admin
+GET http://localhost:3000/profile/admin/allstaff
+
+### DISPLAYING ALL CHILDREN - for admin
+GET http://localhost:3000/profile/admin/children
+
+### DISPLAYING ALL CHILDREN - for staff
+GET http://localhost:3000/profile/staff/children
+
+### DISPLAYING ALL RECAPS - for staff
+GET http://localhost:3000/profile/staff/allrecaps
+
+### DISPLAYING ALL COMMENTS - for staff
+GET http://localhost:3000/profile/staff/comments
+
+### DISPLAYING COMMENTS BY PARENT ID - for staff
+GET http://localhost:3000/profile/staff/comments/parent/1
+
+### DISPLAYING COMMENTS BY PARENT ID - for parents
+GET http://localhost:3000/profile/parent/1/comments
+
+### DISPLAYING PARENT PROFILE - parent by id
+GET http://localhost:3000/profile/parent/8
+
+### DISPLAYING CHILD ACCORDING TO PARENT PROFILE
+GET http://localhost:3000/profile/parent/1/child/2
+
+### DISPLAYING STAFF PROFILE - staff by id
+GET http://localhost:3000/profile/staff/5
+
+### DISPLAYING RECAP - by id
+GET http://localhost:3000/profile/staff/recap/1
+
+### DISPLAYING RECAPS - by child id
+GET http://localhost:3000/profile/staff/child/1/recaps
+
+### DISPLAYING COMMENT - by id
+GET http://localhost:3000/profile/staff/comments/3
+
+
+### DISPLAYING COMMENTS - by child id
+GET http://localhost:3000/profile/staff/comments/child/2
+
+### DISPLAYING CHILD - for admin
+GET http://localhost:3000/profile/admin/child/2
+
+### DISPLAYING CHILD - for staff
+GET http://localhost:3000/profile/staff/child/1
+
+### MODIFY CHILD PROFILE - by parent
+PATCH http://localhost:3000/profile/parent/2/child/3
+Content-Type: application/json
+
+{
+    "first_name": "olivier",
+    "birthplace": "nantes"
+}
+
+### MODIFY CHILD PROFILE - by admin
+PATCH http://localhost:3000/profile/admin/parent/2/managechildren/3
+Content-Type: application/json
+
+{
+    "first_name": "Charles",
+    "birthplace": "Orvault"
+}
+
+### DELETE CHILD PROFILE - by admin
+DELETE http://localhost:3000/profile/admin/parent/2/managechildren/3
+
+
+## USER
+
+### try login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "staff@notabebe.io",
+    "password": "staff"
+}
+
+
+###try login with password not hashed
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "barbaradegout@gmail.com",
+    "password": "JeSuisUnRat80"
+}
+
+
+
+
+### update parent password
+PATCH http://localhost:3000/profile/parent/2/password
+
+### update user password
+PATCH http://localhost:3000/profile/parent/6/password
+Content-Type: application/json
+
+{
+    "password": "admin"
+}
+
+
+
+### update staff password
+PATCH http://localhost:3000/profile/staff/5/password
+Content-Type: application/json
+
+{
+    "password": "testouille"
+}
+
+
+### update user info
+PATCH http://localhost:3000/profile/parent/8/
+Content-Type: application/json
+
+{
+    "phone_number": "0123456789"
+}
+
+
+# ADMIN
+
+### adding an user
+POST http://localhost:3000/profile/admin/manageprofile
+Content-Type: application/json
+
+{
+    "first_name": "Mickael",
+    "last_name": "Menet",
+    "address": "50 rue de Paris",
+    "postcode": "12345",
+    "city": "Marigny",
+    "email": "mickaeldu59@gmail.com",
+    "password": "monsuperpassword",
+    "phone_number": "0611203948",
+    "role_id": 1
+}
+
+
+
+### deleting an user
+DELETE http://localhost:3000/profile/admin/manageprofile/8
+
+### adding a child
+POST http://localhost:3000/profile/admin/parent/3/managechildren
+Content-Type: application/json
+
+{
+    "first_name": "Mickael",
+    "last_name": "Menet",
+    "birthdate": "18/04/1995",
+    "birthplace": "Metz",
+    "sex": "F",
+    "allergies": "amandes"
+}
+
+# RECAP
+
+### add recap
+POST http://localhost:3000/profile/staff/child/recap/
+Content-Type: application/json
+
+{
+    "date": "10/08/2019",
+    "extra_info": "a été sage toute la journée",
+    "mood": "fatigué",
+    "child_id": 1
+}
+
+### add a nap to a recap
+POST http://localhost:3000/profile/staff/child/recap/2/nap/
+Content-Type: application/json
+
+{
+    "start_time": "10:00:00",
+    "end_time": "12:00:00",
+    "comment": "gros dodo"
+}
+
+### add a meal to a recap
+POST http://localhost:3000/profile/staff/child/recap/6/meal/
+Content-Type: application/json
+
+{
+    "time": "13:00:00",
+    "comment": "tout mangé mais en a mis plein partout"
+}
+
+### modify one field of a recap
+PATCH http://localhost:3000/profile/staff/child/recap/3/
+Content-Type: application/json
+
+{
+    "date": "18/05/2025"
+}
+
+### modify a nap of a recap
+PATCH http://localhost:3000/profile/staff/child/recap/6/nap/10
+Content-Type: application/json
+
+{
+    "start_time": "23:00:00"
+}
+
+### modify a meal of a recap
+PATCH http://localhost:3000/profile/staff/child/recap/6/meal/10
+Content-Type: application/json
+
+{
+    "comment": "une modif en test"
+}
+
+### delete a recap
+DELETE http://localhost:3000/profile/staff/child/recap/1
+
+### delete a nap
+DELETE http://localhost:3000/profile/staff/child/recap/6/nap/11
+
+### delete a meal
+DELETE http://localhost:3000/profile/staff/child/recap/6/meal/11
+
+
+
+
+# COMMENTS
+
+### add comment
+POST http://localhost:3000/profile/parent/1/child/1/comments
+Content-Type: application/json
+
+{
+    "message": "essai de com"
+}
+
+### modify comment
+PATCH http://localhost:3000/profile/parent/1/child/1/comments/11
+Content-Type: application/json
+
+{
+    "message": "essai de modif de com",
+    "child_id": 1
+}
+
+### delete comment
+DELETE http://localhost:3000/profile/parent/3/child/4/comments/10
+
+

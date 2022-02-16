@@ -1,0 +1,38 @@
+@use 'src/styles/vars' as v;
+
+.childinfos {
+  margin: 0 v.$gutter v.$gutter;
+  margin-bottom: 0.7rem;
+  padding: 2rem ;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+	-webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+	-moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+  text-overflow: ellipsis;
+  word-wrap: break-word;   
+  font-size: .9em;
+
+  &__firstname {
+    font-size: 4rem;
+    font-weight: bold;
+    color: v.$red-color;
+    margin-bottom: v.$gutter;
+    text-align: center;
+    font-family: v.$amatic;
+  }
+
+    &__infos {
+        font-weight: bold;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        font-size: 1.1em;
+        margin-top: 8px;
+      }
+    
+    }
+
+  
+ 
+

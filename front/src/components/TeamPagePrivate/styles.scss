@@ -1,0 +1,85 @@
+@use 'src/styles/vars'as v;
+
+
+.team__page__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+.team__page {
+  //padding-top: 0.5em;
+  display: flex;
+  margin-left: 3em;
+  margin-right: 3em;
+  //flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__front {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  &__back {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+
+  }
+
+  &__item {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+
+
+    &__img {
+      margin: auto;
+      border-radius: 100%;
+      border: 2px solid v.$violet-color;
+      transition: ease-in-out 0.3s all;
+
+      &:hover {
+        filter: grayscale(1);
+      }
+    }
+
+    &__name {
+      font-weight: bold;
+      margin-top: 0.3em;
+      font-size: 1.3em;
+      text-align: center;
+    }
+
+    &__text {
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: center;
+      margin-top: 0.2em;
+
+      &__tech {
+        text-align: center;
+        font-size: 1em;
+        padding-bottom: 0.4em;
+      }
+    }
+
+    &__logos {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+}
+
+.button-settings-back-team {
+  margin: auto;
+}

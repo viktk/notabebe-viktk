@@ -1,0 +1,156 @@
+## TEST STAFF ROUTES
+
+### DISPLAYING ALL CHILDREN
+GET http://localhost:3000/profile/staff/children
+
+
+### DISPLAYING ALL RECAPS
+GET http://localhost:3000/profile/staff/allrecaps
+
+
+### DISPLAYING ALL COMMENTS
+GET http://localhost:3000/profile/staff/comments
+
+
+### DISPLAYING COMMENTS BY PARENT ID
+GET http://localhost:3000/profile/staff/comments/parent/1
+
+
+### DISPLAYING STAFF PROFILE BY ID
+GET http://localhost:3000/profile/staff/9
+
+
+### DISPLAYING RECAP BY ID
+GET http://localhost:3000/profile/staff/recap/2
+
+
+### DISPLAYING RECAPS BY CHILD ID
+GET http://localhost:3000/profile/staff/child/1/recaps
+
+
+### DISPLAYING COMMENT BY ID
+GET http://localhost:3000/profile/staff/comments/4
+
+
+### DISPLAYING COMMENTS BY CHILD ID
+GET http://localhost:3000/profile/staff/comments/child/2
+
+
+### UPDATING STAFF PASSWORD
+PATCH http://localhost:3000/profile/staff/9/password
+Content-Type: application/json
+
+{   
+    "oldPassword": "test",
+    "password": "yann"
+}
+
+
+### ADDING A RECAP
+POST http://localhost:3000/profile/staff/child/recap/
+Content-Type: application/json
+
+{
+    "date": "11/11/2019",
+    "extra_info": "test recap",
+    "mood": "on a réussi l'ajout",
+    "child_id": 7,
+    "naps": [{
+        "start_time": "11:00:00",
+        "end_time": "12:00:00",
+        "comment": "merci à nico"
+    },
+    {
+        "start_time": "20:00:00",
+        "end_time": "22:00:00",
+        "comment": "test pour une deuxième sieste"
+    }],
+    "meals": [{
+        "time": "12:14:56",
+        "comment": "maintenant pour la modification ça va être une autre affaire"
+    }]
+}
+
+
+### ADDING A RECAP
+POST http://localhost:3000/profile/staff/child/recap/
+Content-Type: application/json
+
+{
+    "date": "20/04/2020",
+    "extra_info": "coucou les fronteux",
+    "mood": "on a réussi l'ajout",
+    "child_id": 10
+}
+
+
+### ADDING A NAP TO A RECAP
+POST http://localhost:3000/profile/staff/child/recap/25/nap/
+Content-Type: application/json
+
+{
+    "start_time": "10:00:00",
+    "end_time": "12:00:00",
+    "comment": "gros dodo"
+}
+
+
+### ADDING A MEAL TO A RECAP
+POST http://localhost:3000/profile/staff/child/recap/23/meal/
+Content-Type: application/json
+
+{
+    "time": "13:00:00",
+    "comment": "tout mangé mais en a mis plein partout"
+}
+
+
+### MODIFYING ONE TO SEVERAL FIELDS FROM A RECAP
+PATCH http://localhost:3000/profile/staff/child/recap/23/
+Content-Type: application/json
+
+{
+    "date": "11/11/2019",
+    "extra_info": "yeux explosés",
+    "mood": "mais ça marche !",
+    "child_id": 10,
+    "naps": [{
+        "start_time": "11:00:00",
+        "end_time": "12:00:00",
+        "comment": "merci charles"
+    }],
+    "meals": [{
+        "time": "12:14:56",
+        "comment": "je veux dormir"
+    }]
+}
+
+### MODIFYING A NAP IN A RECAP
+PATCH http://localhost:3000/profile/staff/child/recap/23/nap/29
+Content-Type: application/json
+
+{
+    "start_time": "09:00:00"
+}
+
+
+### MODIFYING A MEAL IN A RECAP
+PATCH http://localhost:3000/profile/staff/child/recap/6/meal/10
+Content-Type: application/json
+
+{
+    "comment": "une modif en test"
+}
+
+
+### DELETING A RECAP - AND ALL ASSOCIATED NAPS/MEALS
+DELETE http://localhost:3000/profile/staff/child/recap/23
+
+
+### DELETING A NAP
+DELETE http://localhost:3000/profile/staff/child/recap/47/nap/49
+
+
+### DELETING A MEAL
+DELETE http://localhost:3000/profile/staff/child/recap/6/meal/11
+

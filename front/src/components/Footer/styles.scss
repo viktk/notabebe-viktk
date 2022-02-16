@@ -1,0 +1,16 @@
+@use 'src/styles/vars' as v;
+
+.footer {
+  font-family: v.$montserrat;
+  color: v.$yann-color;
+  //background: linear-gradient(v.$secondary-color, v.$bg-color);
+  background: v.$violet-color;
+  text-align: center;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
+}

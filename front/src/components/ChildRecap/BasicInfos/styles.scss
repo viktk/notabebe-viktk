@@ -1,0 +1,34 @@
+@use 'src/styles/vars' as v;
+@use "sass:math";
+
+.basicinfos {
+  &__infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 v.$gutter v.$gutter;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3); 
+      -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+      &__icon {
+        margin: 1rem 0;
+        margin-right: 2rem;
+
+        padding: math.div(v.$gutter, 2);
+
+        background-color: v.$bg-color;
+        border-radius: 100px;
+        width: 100px;
+    }
+      &__firstname {
+        font-size: 1.8em;
+      }
+      &__mood {
+        font-size: 1rem;
+      }
+  }
+  
+}
